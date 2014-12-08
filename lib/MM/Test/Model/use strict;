@@ -1,0 +1,24 @@
+use strict;
+use warnings;
+use v5.10;
+
+package MM::Test::Model::User;
+
+sub new {
+    my ( $class, %options ) = @_;
+    return bless \%options, $class;
+}
+
+sub save {
+    my ( $self ) = @_;
+}
+
+sub delete {
+    my ( $self ) = @_;
+}
+
+sub list {
+    my ( $self ) = @_;
+}
+
+1;

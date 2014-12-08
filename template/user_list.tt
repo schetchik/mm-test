@@ -1,0 +1,18 @@
+User List
+<br/>
+<table border=1>
+[% DEFAULT
+    name_sort_order = 1
+%]
+<tr><th><a href="?sort=name&order=[% name_sort_order %]">Имя</a></th><th>Почта</th><th>Дата регистрации</th></tr>
+[% FOREACH user = users %]
+<tr>
+	<td>[% user.name FILTER html %]</td>
+	<td>[% user.email FILTER html %]</td>
+	<td>[% user.reg_date FILTER html %]</td>
+</tr>
+[% END %]
+</table>
+<a href="/logout">Logout</a>
+<javascript src="/static/tablesorter.json">
+</javascript>

@@ -1,0 +1,12 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h3>[% error FILTER html %]</h3>
+        <form method=post  action="registration">
+            Имя: <input type="text" name="name" value="[% name FILTER html %]">
+            Электронная почта: <input type="text" name="email" value="[% email FILTER html %]">
+            <input type="submit" value="Зарегистрироваться">
+        </form>
+    </body>
+</html>
